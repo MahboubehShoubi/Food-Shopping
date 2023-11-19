@@ -1,9 +1,9 @@
-import Menu from "../../component/templates/Menu";
+import React from 'react';
 
 const index = () => {
     return (
         <div>
-            <Menu />
+            <h1>Categories</h1>
         </div>
     );
 };
