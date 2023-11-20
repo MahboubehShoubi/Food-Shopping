@@ -1,11 +1,21 @@
-import Menu from "../../component/templates/Menu";
+import MenuPage from "../../component/templates/MenuPage";
 
-const index = () => {
+const Menu = ({data}) => {
     return (
         <div>
-            <Menu />
+            <MenuPage data={data}/>
         </div>
     );
 };
 
-export default index;
+export default Menu;
+
+export async function getStaticProps() {
+    const res = await fetch("http://localhost:4000/data")
+    const data = await res.json();
+
+    return{
+        props : { data } ,
+        revalidate:3600 ,
+    }
+}
