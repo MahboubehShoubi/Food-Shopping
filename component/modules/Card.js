@@ -9,7 +9,7 @@ const Card = (props) => {
     const {id , name , price , details , discount } = props;
     return (
         <div className={styles.container}>
-            <Link href="/details">
+            <Link href={`/menu/${id}`} >
                 <img src={`/image/${id}.jpeg`} />
                 <div className={styles.details}>
                     <h4>{name}</h4>
@@ -19,8 +19,8 @@ const Card = (props) => {
                     </div>
                 </div>
                 <div className={styles.price}>
-                    <span>{price}</span>
                     <Dollar />
+                    <span>{price}$</span>
                 </div>
                 {
                   discount ? <span className={styles.discount}>{discount} %</span> : null

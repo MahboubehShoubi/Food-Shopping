@@ -15,6 +15,17 @@ a {
   box-sizing: border-box;
 }
 
+:root{
+  --green-main: #25883D ;
+  --red-discount:rgb(206, 76, 76);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
